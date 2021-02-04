@@ -3,25 +3,18 @@ import React from 'react';
 import './index.scss';
 
 // eslint-disable-next-line react/prop-types
-const MarkdownInput = ({ onInputValueChanged }) => {
+const MarkdownInput = ({ display }) => {
   const [title, setTitle] = React.useState('');
   const [note, setNote] = React.useState('');
 
-  const handleOutputChange = () => {
-    const { value } = note;
-    console.log(note);
-    onInputValueChanged(value);
-  };
-
   const handleTitleChange = (event) => {
-    setTitle(event.target);
-    handleOutputChange();
+    setTitle(event.target.value);
+    display(title, note);
   };
 
   const handleNoteChange = (event) => {
-    setNote(event.target);
-    console.log(note);
-    handleOutputChange();
+    setNote(event.target.value);
+    display(title, note);
   };
 
   return (

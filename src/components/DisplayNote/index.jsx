@@ -3,16 +3,21 @@ import MarkdownInput from '../MarkdownInput';
 import './index.scss';
 
 const DisplayNote = () => {
-  const [userWord, setUserWord] = React.useState(null);
+  const [dTitle, setDTitle] = React.useState('');
+  const [dNote, setDNote] = React.useState('');
 
-  const handleChange = (value) => {
-    setUserWord(value);
+  const display = (title, note) => {
+    setDNote(note);
+    setDTitle(title);
   };
+
+  const createMarkup = (html) => ({ __html: html });
 
   return (
     <div>
-      <textarea id="story" name="story" rows="5" value={userWord} cols="33" />
-      <MarkdownInput onInputValueChanged={handleChange} />
+      <h2 className="title" dangerouslySetInnerHTML={createMarkup(dTitle)} />
+      <p className="note" dangerouslySetInnerHTML={createMarkup(dNote)} />
+      <MarkdownInput display={display} />
     </div>
   );
 };
