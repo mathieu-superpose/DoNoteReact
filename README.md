@@ -1,6 +1,6 @@
 # DoNoteReact
 
-Take note in Markdown and store them in Localstorage.
+Take notes in Markdown and store them in Localstorage.
 Developped in one day for THP Next bootcamp 2021
 
 <p align="center">
