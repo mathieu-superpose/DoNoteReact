@@ -1,3 +1,5 @@
+@import '../../App.scss';
+
 .display-note {
   display: flex;
   flex-direction: column;
@@ -23,4 +25,9 @@
 .input {
   height: 55%;
   width: 100%;
+
+  button {
+    @include buttonRed;
+    margin-left: 20px;
+  }
 }
