@@ -2,11 +2,16 @@ import './App.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DisplayNote from './components/DisplayNote';
+import Sidebar from './components/Sidebar';
 
 const App = () => (
-  <div>
-    <h1>D o N o t e R e a c t</h1>
-    <DisplayNote />
+  <div className="index">
+    <div className="sidebar">
+      <Sidebar />
+    </div>
+    <div className="display-note">
+      <DisplayNote />
+    </div>
   </div>
 );
 

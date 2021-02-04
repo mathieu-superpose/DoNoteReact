@@ -13,17 +13,25 @@ const MarkdownInput = ({ onDisplay }) => {
   const handleNoteChange = (event) => {
     setNote(event.target.value);
   };
-  
-    React.useEffect(() => {
-      onDisplay(title, note);
-    }, [handleTitleChange, handleNoteChange]);
-  
+
+  React.useEffect(() => {
+    onDisplay(title, note);
+  }, [handleTitleChange, handleNoteChange]);
+
+  const saveNote = () => {
+    localStorage.setItem(title, note);
+
+    const localStore = localStorage.getItem(title);
+    console.log(localStore);
+  };
+
   return (
-    <form className="markdown-input">
+    <div className="markdown-input">
       <input
         type="text"
-        className="title"
+        className="markdown-input__title"
         maxLength="30"
+        placeholder="Ma premier note"
         onChange={handleTitleChange}
       />
       <textarea
@@ -31,10 +39,12 @@ const MarkdownInput = ({ onDisplay }) => {
         name="story"
         rows="5"
         cols="33"
+        className="markdown-input__text"
+        placeholder="Bla bla bla..."
         onChange={handleNoteChange}
       />
-      <input type="submit" value="Envoyer" />
-    </form>
+      <button onClick={saveNote}>Sauvegarder</button>
+    </div>
   );
 };
 
