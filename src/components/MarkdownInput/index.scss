@@ -1,4 +1,36 @@
-.markdown-input{
+@import '../../App.scss';
+
+.markdown-input {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding: 20px;
+
+  input[type="text"], textarea {
+    background-color : #4B4B4B; 
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 15px;
+    color: white;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    height: 200px;
+    border-radius: 5px;
+    border: none;
+    padding-left: 15px;
+    padding-top: 15px;
+    color: white;
+  }
+
+  button {
+    @include buttonRed;
+  }
 }
+

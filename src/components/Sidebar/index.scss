@@ -1,0 +1,25 @@
+@import '../../App.scss';
+
+.side-bar {
+  &__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  button {
+    @include buttonRed;
+  }
+
+  h2 {
+    color: #C70625;
+    font-weight: bolder;
+    padding-left: 15px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: white;
+    padding-left: 15px;
+  }
+}

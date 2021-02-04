@@ -4,9 +4,23 @@
 }
 
 .display {
-  height: 50%;
+  height: 45%;
+  width: 100%;
+
+  h2 {
+    color: #C70625;
+    font-weight: bolder;
+    padding-left: 15px;
+    margin-bottom: 10px;
+  }
+
+  p {
+    color: white;
+    padding-left: 15px;
+  }
 }
 
 .input {
-  height: 50%;
+  height: 55%;
+  width: 100%;
 }
