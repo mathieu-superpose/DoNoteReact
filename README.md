@@ -4,7 +4,7 @@ Take note in Markdown and store them in Localstorage.
 Developped in one day for THP Next bootcamp 2021
 
 <p align="center">
-  <img alt="DoNoteReact logo" src="./public/donotreact.png"/>
+  <img alt="DoNoteReact logo" src="./public/donotereact.png"/>
 </p>
 
 ## Tech
