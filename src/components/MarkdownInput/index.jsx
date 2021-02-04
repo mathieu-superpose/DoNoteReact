@@ -2,21 +2,22 @@
 import React from 'react';
 import './index.scss';
 
-// eslint-disable-next-line react/prop-types
-const MarkdownInput = ({ display }) => {
+const MarkdownInput = ({ onDisplay }) => {
   const [title, setTitle] = React.useState('');
   const [note, setNote] = React.useState('');
-
+  
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
-    display(title, note);
   };
-
+  
   const handleNoteChange = (event) => {
     setNote(event.target.value);
-    display(title, note);
   };
-
+  
+    React.useEffect(() => {
+      onDisplay(title, note);
+    }, [handleTitleChange, handleNoteChange]);
+  
   return (
     <form className="markdown-input">
       <input

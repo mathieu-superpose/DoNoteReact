@@ -17,7 +17,7 @@ const DisplayNote = () => {
     <div>
       <h2 className="title" dangerouslySetInnerHTML={createMarkup(dTitle)} />
       <p className="note" dangerouslySetInnerHTML={createMarkup(dNote)} />
-      <MarkdownInput display={display} />
+      <MarkdownInput onDisplay={display} />
     </div>
   );
 };
