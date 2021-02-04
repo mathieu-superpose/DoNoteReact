@@ -17,6 +17,7 @@ const App = () => {
     const keys = Object.keys(localStorage);
     let i = keys.length;
     while (i--) {
+      console.log(localStorage.getItem(keys[i]));
       values.push(localStorage.getItem(keys[i]));
     }
     console.log(values);
