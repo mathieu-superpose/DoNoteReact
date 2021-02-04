@@ -20,9 +20,6 @@ const MarkdownInput = ({ onDisplay }) => {
 
   const saveNote = () => {
     localStorage.setItem(title, note);
-
-    const localStore = localStorage.getItem(title);
-    console.log(localStore);
   };
 
   return (
@@ -43,7 +40,6 @@ const MarkdownInput = ({ onDisplay }) => {
         placeholder="Bla bla bla..."
         onChange={handleNoteChange}
       />
-      <button onClick={saveNote}>Sauvegarder</button>
     </div>
   );
 };
