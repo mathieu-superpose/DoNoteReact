@@ -15,9 +15,9 @@ Use of [Showdown](https://github.com/showdownjs/showdown)
 
 ## Potential Improvements
 
-Acces and modify notes :sweat_smile:
-Auto-save
-Animations (AnimeJS)
+- Acces and modify notes :sweat_smile:
+- Auto-save
+- Animations (AnimeJS)
 
 ## Contributors
 
