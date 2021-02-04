@@ -9,9 +9,15 @@ Developped in one day for THP Next bootcamp 2021
 
 ## Tech
 
-Javascript and React.
+Javascript and [React](https://github.com/facebook/react), [Node Sass](https://github.com/sass/node-sass).
 
 Use of [Showdown](https://github.com/showdownjs/showdown)
+
+## Potential Improvements
+
+Acces and modify notes :sweat_smile:
+Auto-save
+Animations (AnimeJS)
 
 ## Contributors
 
