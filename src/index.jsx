@@ -1,3 +1,4 @@
+/* eslint-disable */
 import './App.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -11,7 +12,20 @@ const App = () => {
     setNotes([...notes, newNote]);
   };
 
-  // use effect local storage
+  const initializeNotes = () => {
+    const values = [];
+    const keys = Object.keys(localStorage);
+    let i = keys.length;
+    while (i--) {
+      values.push(localStorage.getItem(keys[i]));
+    }
+    console.log(values);
+    setNotes([...values]);
+  };
+
+  React.useEffect(() => {
+    initializeNotes();
+  }, []);
 
   return (
     <div className="index">

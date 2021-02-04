@@ -18,18 +18,14 @@ const MarkdownInput = ({ onDisplay }) => {
     onDisplay(title, note);
   }, [handleTitleChange, handleNoteChange]);
 
-  const saveNote = () => {
-    localStorage.setItem(title, note);
-  };
-
   return (
     <div className="markdown-input">
       <input
         type="text"
         className="markdown-input__title"
         maxLength="30"
-        placeholder="Ma premier note"
         onChange={handleTitleChange}
+        value={title}
       />
       <textarea
         id="story"
@@ -37,8 +33,8 @@ const MarkdownInput = ({ onDisplay }) => {
         rows="5"
         cols="33"
         className="markdown-input__text"
-        placeholder="Bla bla bla..."
         onChange={handleNoteChange}
+        value={note}
       />
     </div>
   );
