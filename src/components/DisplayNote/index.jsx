@@ -14,10 +14,14 @@ const DisplayNote = () => {
   const createMarkup = (html) => ({ __html: html });
 
   return (
-    <div>
-      <h2 className="title" dangerouslySetInnerHTML={createMarkup(dTitle)} />
-      <p className="note" dangerouslySetInnerHTML={createMarkup(dNote)} />
-      <MarkdownInput onDisplay={display} />
+    <div className="display-note">
+      <div className="display">
+        <h2 className="title" dangerouslySetInnerHTML={createMarkup(dTitle)} />
+        <p className="note" dangerouslySetInnerHTML={createMarkup(dNote)} />
+      </div>
+      <div className="input">
+        <MarkdownInput onDisplay={display} />
+      </div>
     </div>
   );
 };
