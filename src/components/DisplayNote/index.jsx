@@ -1,6 +1,7 @@
-/* eslint-disable react/prop-types */
+/* eslint-disable */
 import React from 'react';
 import showdown from 'showdown';
+import { v4 as uuidv4 } from 'uuid';
 import MarkdownInput from '../MarkdownInput';
 import './index.scss';
 
@@ -19,6 +20,7 @@ const DisplayNote = ({ onSavedNote }) => {
 
   const handleSave = () => {
     const newNote = { title: dTitle, note: dNote };
+    localStorage.setItem(uuidv4(), JSON.stringify(newNote));
     onSavedNote(newNote);
   };
 
