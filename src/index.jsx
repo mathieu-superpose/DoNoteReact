@@ -17,10 +17,10 @@ const App = () => {
     const keys = Object.keys(localStorage);
     let i = keys.length;
     while (i--) {
-      console.log(localStorage.getItem(keys[i]));
-      values.push(localStorage.getItem(keys[i]));
+      const newValue = localStorage.getItem(keys[i]);
+      values.push(JSON.parse(newValue));
     }
-    console.log(values);
+    
     setNotes([...values]);
   };
 

@@ -20,7 +20,7 @@ const DisplayNote = ({ onSavedNote }) => {
 
   const handleSave = () => {
     const newNote = { title: dTitle, note: dNote };
-    localStorage.setItem(uuidv4(), newNote);
+    localStorage.setItem(uuidv4(), JSON.stringify(newNote));
     onSavedNote(newNote);
   };
 
