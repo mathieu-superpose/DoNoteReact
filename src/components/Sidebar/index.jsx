@@ -1,8 +1,11 @@
 /* eslint-disable */
 import React from 'react';
-import uuid from 'uuid';
+import showdown from 'showdown';
 import './index.scss';
 
+const converter = new showdown.Converter();
+
+const createMarkup = (html) => ({ __html: html });
 
 const Sidebar = ({ notes }) => (
 
@@ -13,10 +16,13 @@ const Sidebar = ({ notes }) => (
     <h2>Notes</h2>
     <ul>
       {notes.map((note) => (
-        <li>{note.title}</li>
+        <li>
+          <div>{note.title}</div>
+          <p className="note">{note.note.match(/\w+/g).join(' ').substring(0, 100)}</p>
+        </li>
       ))}
     </ul>
   </div>
-  );
+);
 
 export default Sidebar;
