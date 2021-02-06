@@ -12,7 +12,7 @@
   }
 
   h2 {
-    color: #C70625;
+    color: $color-red;
     font-weight: bolder;
     padding-left: 15px;
     margin-bottom: 10px;
@@ -21,5 +21,13 @@
   p {
     color: white;
     padding-left: 15px;
+  }
+
+  &__side-notes {
+
+    &__side-note:hover {
+      background: $color-palered;
+      border: $color-yellow 1px solid;
+    }
   }
 }

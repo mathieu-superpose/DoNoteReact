@@ -14,11 +14,11 @@ const Sidebar = ({ notes }) => (
       <button type="button">Ajouter une note</button>
     </div>
     <h2>Notes</h2>
-    <ul>
+    <ul className='side-bar__side-notes'>
       {notes.map((note) => (
-        <li>
+        <li className='side-bar__side-notes__side-note'>
           <div>{note.title}</div>
-          <p className="note">{note.note.match(/\w+/g).join(' ').substring(0, 100)}</p>
+          <p className="side-bar__side-notes__side-note__note">{note.note.match(/\w+/g).join(' ').substring(0, 100)}</p>
         </li>
       ))}
     </ul>
